@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Detections</title>
+</head>
+<body>
+    <h1>Face Detections</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Label</th>
+                <th>Image URL</th>
+                <th>NPY URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for detection in face_detections %}
+            <tr>
+                <td>{{ detection.index }}</td>
+                <td>{{ detection.label }}</td>
+                <td>{{ detection.url_image }}</td>
+                <td>{{ detection.url_npy }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
